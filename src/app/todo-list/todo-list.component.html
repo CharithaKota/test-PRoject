@@ -1,0 +1,14 @@
+<div>
+    <h3>Todo List Using JavaScript</h3>
+    <div>
+        <input type="text" [(ngModel)] = "inputRef" required>
+        <button (click)="onAdd()">Add</button>
+    </div>
+    <div>
+        <ul *ngFor="let item of list; let index = index">
+            <li>
+               {{index}} {{item}} <button (click)="onDelete(index)"> X </button>
+            </li>
+        </ul>
+    </div>
+</div>
